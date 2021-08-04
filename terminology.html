@@ -1,0 +1,75 @@
+<html>
+  <head><title>GQP Terminology</title></head>
+  <body>
+    <ul>
+      <li>
+        <h4>Predicate</h4>
+          Smallest expression part. In algebra it would be a term.
+          operator <strong>MUST</strong> be one of Predicate operators.
+          see code for current list but includes:
+        <code>$eq</code>,
+        <code>$lt</code>,
+        <code>$lte</code>,
+        <code>$gt</code>,
+        <code>$gte</code>,
+        <code>$like</code>,
+        <code>$anyOf</code>,
+        <code>$oneOf</code>,
+        <pre>
+        <code>
+          {
+            subjectId: 'lastName',
+            operator:  '$eq',
+            value: 'Flintstone'
+          }
+          </code>
+        </pre> 
+      </li>
+      <li>
+        <h4>PredicateBranch</h4>
+          Conjunction or Disjunction expression.
+          operator <strong>MUST</strong> be one of PredicateBranch operators.
+          See code for current list but includes: <code>$or</code>, <code>$and</code>
+        <pre>
+        <code>
+          {
+            subjectId: 'lastName',
+            operator:  '$eq',
+            value: 'Flintstone'
+          }
+          </code>
+        </pre> 
+      </li>
+      <li>
+        <h4>Predicate Tree Document</h4>
+        JSON document in the form of: 
+        <pre>
+          <code>
+            {
+              predicateId001:{parentId: null, operator: $and},
+              predicateId002:{parentId: 'predicateId001', subjectId: 'lastName', operator: '$eq', value: 'Flintstone'},
+              predicateId003:{parentId: 'predicateId001', subjectId: 'firstName', operator: '$eq', value: 'Fred'},
+            }
+          </code>
+          <ul>
+            <li>key/id - no special requirement other than they are logically coherent (parentId is in document)</li>
+            <li>All branches <strong>MUST</strong> have two or more children</li>
+            <li>One and <strong>ONLY</strong> one root node <code>{parentId: null,...}</code> </li>
+            <li>All branches must have parent in document, except root</li>            
+          </ul>
+        </pre>
+      </li>
+      <li>
+        <h4>Predicate Tree</h4>
+        Code dependant.  The implementation/objectification of a 
+        Predicate Tree. Will likely have properties like: 
+        <code>.getPredicateById()</code>,
+        <code>.addPredicate([predicate])</code>,  
+      </li>
+      <li>subject</li>
+      <li>predicate branch operator (maybe already defined)</li>
+      <li>Projection</li>
+    </ul>
+
+  </body>
+</html>

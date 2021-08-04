@@ -1,0 +1,55 @@
+<html>
+  <head><title>GQP Terminology</title></head>
+  <body>
+    <h3>Road Map</h3>
+    <ul>
+      <li>
+        <h4>PredicateTree.matcher()</h4>
+        something like like:
+        <pre>
+          <code>
+            predicateTree.compile(predicateTreeDoc);
+            const filtered = rows.filter(row=>{
+              predicateTree.match(row);
+            })
+          </code>
+        </pre>
+        Can be ran client side. Normally this functionality would be provided by database
+        <code>predicateTree.toSql()</code>
+      </li>
+      <li>
+        <h4>ConverterClass</h4>
+        <code>PTreeConverter.toSql(predicateTreeDocument)</code>
+        <code>PTreeConverter.toMongo(predicateTreeDocument)</code>
+        <code>PTreeConverter.toGraph(predicateTreeDocument)</code>
+      </li>
+      <li>
+        <h4>Build PHP simple</h4>
+        <pre>
+          <code>
+            &lt;?php 
+            $pTree =PredicateTree.fromDocument($document);
+            $pTree.toSQL();
+          </code>
+        </pre>
+      </li>
+      <li>
+        <h4>Documentation</h4>
+        <ul>
+          <li>Storybook Like</li>
+          <li>Each Datatype</li>
+          <li>Swagger Like</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Get to know GraphQL</h4>
+        Can this be applied to that?
+      </li>
+      <li>
+        <h4>Review OAPI </h4>
+        Can create schema from <br />
+        <code>type XXX = ....</code> 
+      </li>
+    </ul>
+  </body>
+</html>
