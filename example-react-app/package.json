@@ -55,8 +55,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build:old": "react-scripts build",
-    "build": "react-scripts build && rm -rf  ../docs/example-app && mv build/ ../docs/example-app",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
