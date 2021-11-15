@@ -21,15 +21,10 @@ To use:
       parentEl={stackRef.current}
     />
 */
-
-import React from "react";
-import Popover from "@mui/material/Popover";
-
 import type {
   TPredicateProperties,
   TPredicatePropertiesArrayValue,
 } from "gabby-query-protocol-lib";
-import Box from "@mui/material/Box";
 import { PredicateEditor } from "./PredicateEditor";
 import { PopoverContainer } from "../common/PopoverContainer";
 

@@ -2,7 +2,6 @@ import React from "react";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 
-import type { TSupportedLocales } from "../../i18n";
 import type { ApplicationUtilitiesType } from "../ApplicationUtilitiesProvider/type";
 import { ApplicationUtilitiesContext } from "../ApplicationUtilitiesProvider/ApplicationUtilitiesProvider";
 

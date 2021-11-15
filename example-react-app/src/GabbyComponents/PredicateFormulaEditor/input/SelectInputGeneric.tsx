@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import * as React from "react";
 import { Theme, useTheme } from "@mui/material/styles";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
@@ -24,8 +23,6 @@ function getStyles(theme: Theme) {
     fontWeight: theme.typography.fontWeightMedium,
   };
 }
-
-type ValueType = (number | string)[]; // do not export.  If export is necessary change name T... (no "Type"), the convention
 
 interface IProps<T> {
   isMultiple: boolean;

@@ -6,15 +6,13 @@ import { useRef, useState } from "react";
 import { PopoverContainer } from "../common/PopoverContainer";
 import IconButton from "@mui/material/IconButton";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
-import { useTheme } from "@mui/system";
 import { customStyles } from "../../Application/custom-styles";
 
 const { useProjectionSubjects, useProjectionUtilities } = ProjectionHooks;
 
 export const ProjectionItemCreator = () => {
-  const theme = useTheme;
   const [isOpenForEdit, setIsOpenForEdit] = useState(false);
-  const [newProjectionItem, setNewProjectionItem] = useState({});
+  const [, setNewProjectionItem] = useState({});
   const { addProjectionItem } = useProjectionSubjects();
   const { makeDefaultProjectionItem } = useProjectionUtilities();
 

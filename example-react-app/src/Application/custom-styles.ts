@@ -1,4 +1,3 @@
-import { useTheme } from "@mui/system";
 import { Theme } from "@mui/material/styles";
 export const customStyles = {
   longText: "rgba(0, 0, 0, 0.7)",

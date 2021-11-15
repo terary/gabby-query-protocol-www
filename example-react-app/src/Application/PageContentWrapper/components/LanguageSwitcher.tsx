@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { SUPPORTED_LOCALE_DICTIONARY, useApplicationUtilities } from "../..";
 import type { TSupportedLocales } from "../..";
-import { useTheme, makeStyles } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -36,13 +36,11 @@ export const LanguageSwitcher = () => {
           sx={{ color: theme.palette.grey[100], borderBottom: "1px solid white" }}
         >
           {Object.entries(SUPPORTED_LOCALE_DICTIONARY).map(([localeKey, localeSetting]) => {
-            {
-              return (
-                <MenuItem value={localeKey} key={localeKey}>
-                  {localeSetting.countryNameLocal}
-                </MenuItem>
-              );
-            }
+            return (
+              <MenuItem value={localeKey} key={localeKey}>
+                {localeSetting.countryNameLocal}
+              </MenuItem>
+            );
           })}
         </Select>
       </FormControl>

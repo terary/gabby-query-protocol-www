@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 /*
@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
   needs to be like this, but should be reorganized
   to import normally
 */
-// import "../i18n/i18nBuilder";
 import { i18nInit } from "../../i18n";
 import type { TSupportedLocales, TLocaleSettings } from "../../i18n";
 import { supportedLocaleDictionary } from "../../i18n";

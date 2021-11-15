@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const ButtonsFinishCancelText = ({ onFinish, onCancel }: Props): JSX.Element => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Grid container spacing="3">

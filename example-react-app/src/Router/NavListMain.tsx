@@ -1,13 +1,11 @@
 import * as React from "react";
 import List from "@mui/material/List";
 
-import ListItem from "@mui/material/ListItem";
-import MuiListItem, { ListItemProps } from "@mui/material/ListItem";
+import ListItem, { ListItemProps } from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
@@ -15,10 +13,8 @@ import { useApplicationUtilities } from "../Application";
 import { NavLink, useLocation } from "react-router-dom";
 import { customStyles } from "../Application";
 import { styled } from "@mui/material/styles";
-import { purple } from "@mui/material/colors";
 
 import { HOME_DIR } from "./common";
-import { BrandingWatermark } from "@mui/icons-material";
 
 type MyNavLinkProps = {
   to: string;
@@ -68,11 +64,6 @@ export const NavListMain = () => {
         Icon={LayersIcon}
         text={t("Predicate Tree (build)")}
       />
-      {/* <MyNavLink
-        to={`${HOME_DIR}predicate-demo`}
-        Icon={LayersIcon}
-        text={t("Predicate Tree (uses)")}
-      /> */}
       <MyNavLink
         to={`${HOME_DIR}projection-demo`}
         Icon={LayersIcon}

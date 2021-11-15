@@ -1,5 +1,5 @@
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import renderer, { act } from "react-test-renderer";
+import renderer from "react-test-renderer";
 import { render, fireEvent, within, cleanup } from "@testing-library/react";
 import { toMatchDiffSnapshot } from "snapshot-diff";
 import { AppContextProviders } from "../../AppContextProviders";

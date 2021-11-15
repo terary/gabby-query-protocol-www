@@ -87,10 +87,6 @@ export const ProjectionItemEditor = ({
   };
 
   const handleColumnOrderChange = (columnOrder: number | string) => {
-    const effectiveColumnOrder = isNaN(parseInt("" + columnOrder))
-      ? 0
-      : parseInt("" + columnOrder);
-
     setNewProjectionItem({
       ...newProjectionItem,
       ...{ columnOrder: columnOrder as number },

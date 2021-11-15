@@ -2,7 +2,6 @@
 import React from "react";
 import { ApplicationUtilitiesContext } from "../ApplicationUtilitiesProvider";
 import type { ApplicationUtilitiesType } from "../ApplicationUtilitiesProvider";
-import { i18nBuilder } from "../../i18n/i18nBuilder";
 
 export const useApplicationUtilities = () => {
   const {

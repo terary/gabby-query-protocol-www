@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const ButtonsFinishCancelIcon = ({ onFinish, onCancel }: Props): JSX.Element => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <Grid container spacing="3">
       <Grid item xs={6}>

@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/system";
 import { GridSize } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -21,8 +20,6 @@ import type {
 import { ButtonsFinishCancelText } from "../common/ButtonsFinishCancelText";
 import { ButtonsFinishCancelIcon } from "../common/ButtonsFinishCancelIcon";
 import { InputMux } from "./InputMux";
-// import { usePredicateTreeUtilities } from "../../GabbyQueryProtocol/PredicateFormula";
-// import { PredicateFormulaEditorContextHooks } from "../../GabbyQueryProtocol";
 
 import { PredicateFormulaHooks } from "../../GabbyQueryProtocol";
 
@@ -66,12 +63,6 @@ const breakpoints = {
     value: 12 as GridSize,
     controlButtons: 12 as GridSize,
   },
-};
-
-const noOpValidator = (
-  predicateProperties: TPredicateProperties | TPredicatePropertiesArrayValue
-): TValidatorResponse => {
-  return { hasError: false, errorMessages: [] };
 };
 
 const noopTestSpyPredicateOnChange = (

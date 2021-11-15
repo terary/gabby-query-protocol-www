@@ -18,7 +18,7 @@ export const AppTitleBar = ({
   titleText,
   toggleDrawer,
 }: IAppBarProps): JSX.Element => {
-  const { t, getLocale, getCurrentLocale } = useApplicationUtilities();
+  const { t, getCurrentLocale } = useApplicationUtilities();
   const currentLocale = getCurrentLocale();
   const RtlToolBar = () => {
     return (

@@ -1,8 +1,4 @@
-import {
-  PredicateFormulaEditorFactory,
-  TPredicateProperties,
-  TPredicatePropertiesArrayValue,
-} from "gabby-query-protocol-lib";
+import { PredicateFormulaEditorFactory } from "gabby-query-protocol-lib";
 import {
   PredicateFormulaContext,
   PredicateFormulaHooks,
@@ -26,12 +22,6 @@ const predicateFormulaEditor = PredicateFormulaEditorFactory.fromJson({
   subjectDictionaryJson,
   predicateTreeJson: predicateFormula,
 });
-
-const validator = (
-  predicateProperties: TPredicateProperties | TPredicatePropertiesArrayValue
-) => {
-  return { hasError: false, errorMessages: [] };
-};
 
 export const PredicateTreeDemoPageRaw = (): JSX.Element => {
   const { getPredicateTreeAsJson } = usePredicateTreeUtilities();
