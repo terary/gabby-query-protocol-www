@@ -1,15 +1,13 @@
-
 [Gabby Query Protocol Project site](https://terary.github.io/gabby-query-protocol-www/)
+
+[Example Site](https://terary.github.io/gabby-query-protocol-www/example-app/)
 
 [GQP Javascript Library](https://github.com/terary/gabby-query-protocol-lib)
 [GQP React Context](https://github.com/terary/gabby-query-protocol-react-context)
 
-
-
 ## Welcome to GitHub Pages
- https://terary.github.io/gabby-query-protocol-www/
 
-
+https://terary.github.io/gabby-query-protocol-www/
 
 You can use the [editor on GitHub](https://github.com/terary/gabby-query-protocol-www/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -23,7 +21,9 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 Syntax highlighted code block
 
 # Header 1
+
 ## Header 2
+
 ### Header 3
 
 - Bulleted

@@ -5,10 +5,12 @@ import Toolbar from "@mui/material/Toolbar";
 import { AppTitleBar } from "./components/AppTitleBar";
 import { AppSideDrawer } from "./components/AppSideDrawer";
 import { useTheme } from "@mui/material/styles";
+import { useApplicationUtilities } from "..";
 interface Props {
   children?: React.ReactNode;
 }
 export function PageContentWrapper({ children }: Props) {
+  const { t } = useApplicationUtilities();
   const [open, setOpen] = React.useState(true);
   const theme = useTheme();
   const toggleDrawer = () => {
@@ -18,7 +20,12 @@ export function PageContentWrapper({ children }: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppTitleBar titleText="I18N Needed Here" isOpen={open} toggleDrawer={toggleDrawer} />
+      <AppTitleBar
+        titleText={t("app-title-bar-text")}
+        subtitleText={t("app-title-bar-subtext")}
+        isOpen={open}
+        toggleDrawer={toggleDrawer}
+      />
       <AppSideDrawer isOpen={open} toggleDrawer={toggleDrawer} />
       <Box
         component="main"

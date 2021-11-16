@@ -11,15 +11,35 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 interface IAppBarProps {
   isOpen: boolean;
   titleText: string;
+  subtitleText: string;
   toggleDrawer: () => void;
 }
 export const AppTitleBar = ({
   isOpen,
   titleText,
+  subtitleText,
   toggleDrawer,
 }: IAppBarProps): JSX.Element => {
   const { t, getCurrentLocale } = useApplicationUtilities();
   const currentLocale = getCurrentLocale();
+
+  const TitleText = () => {
+    return (
+      <Typography component="h1" variant="h4" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+        {titleText}
+        <Typography
+          component="h4"
+          variant="h6"
+          color="inherit"
+          noWrap
+          sx={{ flexGrow: 1, ml: "3%" }}
+        >
+          {subtitleText}
+        </Typography>
+      </Typography>
+    );
+  };
+
   const RtlToolBar = () => {
     return (
       <Toolbar
@@ -32,11 +52,7 @@ export const AppTitleBar = ({
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-          {titleText} <br />
-          {t("app-title-bar-text")}
-          <br />
-        </Typography>
+        <TitleText />
         <LanguageSwitcher />
         <IconButton
           edge="start"
@@ -73,11 +89,7 @@ export const AppTitleBar = ({
         >
           <MenuIcon />
         </IconButton>
-        <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-          {titleText} <br />
-          {t("app-title-bar-text")}
-          <br />
-        </Typography>
+        <TitleText />
         <LanguageSwitcher />
         <IconButton color="inherit">
           <Badge badgeContent={4} color="secondary">
