@@ -71,8 +71,10 @@ export const BranchView = ({ predicateId, children }: Props) => {
           operator={getJunctionProperties().operator === "$or" ? "$or" : "$and"}
           onChange={handleJunctionSwitch}
         />
-        <IconButtonsAdd onClick={handleAddPredicateClick} />
-        {!isRoot && <IconButtonRemove onClick={handleRemovePredicateJunction} />}
+        <div style={{ float: "right", display: "block" }}>
+          <IconButtonsAdd onClick={handleAddPredicateClick} />
+          {!isRoot && <IconButtonRemove onClick={handleRemovePredicateJunction} />}
+        </div>
       </>
     );
   };
